@@ -5,12 +5,26 @@
 }
 
 body {
-    background-color: #000;
+    /* background-color: #000; */
+    background: url(https://app.shaastra.org/static/media/bgImage.372340c442190a125978.png) center center fixed;
+    background-size: cover;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+}
+
+.backgroundElem {
+  background: url(https://64.media.tumblr.com/10e6d6f027ebd9915b9d401853df478d/8df3d86405f4a497-f0/s540x810/58d4b613c53fde3a9d5eb556dbe9c3d80d241f40.gif) center center fixed;
+  background-size: cover;
+  /* background-blend-mode:multiply; */
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  transition: opacity 3s;
+  opacity: 0;
+  z-index: -1;
 }
 
 .text {
@@ -31,12 +45,12 @@ body {
     /* transform: translate(0, 0) scale(0.5); */
     /* for phone size */
     height: auto;
-    width: 320px; 
+    width: 420px; 
     background-image: url('ShaastraLogoWhite.png');
     background-size: cover;
     background-position: center;
     opacity: 0;
-    /* animation: logoAnimation 10s forwards; */
+    /* animation: logoAnimation 3s forwards; */
 }
 
 .letter {
@@ -107,4 +121,123 @@ body {
     100% {
         opacity: 0;
     }
+}
+
+/* Dice */
+.dice {
+  width: 90px;
+  height: 90px;
+  /* background-color: #5681A7; */
+  
+
+  /* animation: diceDrop 1s ease-in-out; */
+  position: fixed;
+  top: 0px;
+  left: 10vw;
+  border: solid 2px #5681A7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  /* box-shadow: 0 0 18px 0.7px #A0D3FF, 0 0 18px 0.7px #A0D3FF inset; */
+}
+
+.dice-container {
+  background-color: #5681A7;
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+  position: relative;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  
+}
+
+.dot:nth-child(1) {
+  top: 10px;
+  left: 10px;
+}
+
+.dot:nth-child(2) {
+  bottom: 10px;
+  right: 10px;
+}
+
+/* .dot:nth-child(3) {
+  bottom: 10px;
+  left: 10px;
+}
+
+.dot:nth-child(4) {
+  bottom: 10px;
+  right: 10px;
+} */
+
+@keyframes diceDrop {
+  0% {
+    transform: translate(10vw, 0vh);
+  }
+  20% {
+    transform: translate(10vw, 15vh) rotate(30deg);
+  }
+  40% {
+    transform: translate(10vw, 30vh) rotate(60deg);
+  }
+  60% {
+    transform: translate(10vw, 45vh) rotate(90deg);
+  }
+  80% {
+    transform: translate(10vw, 60vh) rotate(120deg);
+  }
+  100% {
+    transform: translate(10vw, 75vh) rotate(150deg);
+  }
+}
+
+@keyframes bounce {
+0%{
+transform: translate(10vw, 75vh) rotate(150deg);
+}
+  10% {
+  transform: translate(15vw, 30vh) rotate(180deg);
+  }
+  20% {
+transform: translate(20vw, 75vh) rotate(210deg);
+  }
+  30% {
+transform: translate(25vw, 40vh) rotate(240deg);
+  }
+  40% {
+transform: translate(30vw, 75vh) rotate(270deg);
+}
+50% {
+  transform: translate(35vw, 50vh) rotate(300deg);
+  }
+  60% {
+transform: translate(40vw, 75vh) rotate(330deg);
+  }
+  70% {
+transform: translate(45vw, 60vh) rotate(360deg);
+   }
+80% {
+transform: translate(50vw, 75vh) rotate(390deg);
+}
+90% {
+transform: translate(55vw, 70vh) rotate(420deg);
+}
+  100% {
+  transform: translate(60vw, 75vh) rotate(450deg);
+  }
+}
+
+.bottom-container {
+background-color: black;
+width: 100%;
+height: 110px;
 }
