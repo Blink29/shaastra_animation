@@ -21,7 +21,7 @@ body {
     text-align: center;
     z-index: 1;
     opacity: 1;
-    /* animation: textAnimation 3s forwards; */
+    animation: textAnimation 3s forwards;
 }
 
 .logo {
@@ -40,7 +40,7 @@ body {
 }
 
 .letter {
-    display: inline-block;
+    display: inline;
     opacity: 0;
     top: 50%;
     left: 50%;
