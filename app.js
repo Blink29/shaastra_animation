@@ -40,5 +40,11 @@ function animateText() {
   }
 }
 
+function animateLogo() {
+  const logo = document.querySelector(".logo");
+  logo.style.animation = "logoAnimation 3s forwards";
+}
+
 convertToSpan();
 setTimeout(animateText, 5000);
+setTimeout(animateLogo, 10000);
